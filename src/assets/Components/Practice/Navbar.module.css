@@ -1,0 +1,31 @@
+.gridContainer{
+    /* border: 8px solid; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 100px 100px 100px;
+    gap: 1em;
+}
+
+
+.box {
+   text-align: center;
+    background-color: blueviolet;
+    font-size: 20pt;
+    padding: 2em;
+    
+}
+.gridRightSection{
+    /* border: 8px solid; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 100px 100px 100px;
+    gap: 1em;}
+    
+@media(max-width:420px){
+    .container{
+        flex-wrap: wrap;
+    }
+}
+
+
+/* 5ac2efa586b1d9813a021bf02035f5fc */
