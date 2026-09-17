@@ -1,142 +1,240 @@
-.cardContainer{
-    position: relative;
-    width: 290px;
-    height: 198px;
-    cursor: pointer;
-    transition: transform 0.3 ease;
-    overflow: visible;
-    z-index: 1;
-  
+.cardContainer {
+  position: relative;
+  width: 290px;
+  height: 198px;
+  cursor: pointer;
+  transition: transform 0.3 ease;
+  overflow: visible;
+  z-index: 1;
 }
-.poster{
-    width: 227px;
-    height: 128px;
-    border-radius: 6px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    position: relative;
-    z-index: 2;
+/* Main poster */
+.poster {
+  width: 227px;
+  height: 128px;
+  border-radius: 6px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 .cardContainer:hover.poster {
   opacity: 0;
 }
-.hoverCard{
-position: absolute;
-top: -50px; 
-left: 50%;
-transform: translateX(-50%) scale(0.95);
-width: 320px;
-min-height: 305px;
-height: auto;
-background:#111;
-border-radius: 8px;
-overflow: visible;
-box-shadow: 0px 20px 40px rgba (0, 0, 0, 0.8);
-/* hidden by default */
-opacity: 0;
-visibility: hidden;
-transition:opacity 0.3s ease, visibility 0.3s ease,
-transform 0.3s ease;
- /* optimize the transform */
-will-change: transform, opacity;
- backface-visibility: hidden;
-pointer-events: none; 
-z-index: 999999;
+.hoverCard {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  width: 320px;
+  min-height: 305px;
+  height: auto;
+  background: #111;
+  border-radius: 8px;
+  overflow: visible;
+  box-shadow: 0px 20px 40px rgba (0, 0, 0, 0.8);
+  /* hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+  /* optimize the transform */
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  pointer-events: none;
+  z-index: 999999;
 }
 
-.cardContainer:hover .hoverCard{
-opacity: 1; 
-visibility:visible;
- transform :translateX(-50%)scale(1);
- pointer-events: auto;
+.cardContainer:hover .hoverCard {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+  pointer-events: auto;
 }
-.hoverCard:hover{
-opacity: 1; 
-visibility:visible;
-transform :scale(1);
-pointer-events: auto;
+.hoverCard:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  pointer-events: auto;
 }
-.hoverImage{
-    width: 100%;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
+.hoverImage {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
 }
 
-.badge{
-background-color:red;
-color: white;
-font-size: 12px;
-padding: 2px 8px;
-border-radius: 4px;
-display: inline-block;
-margin: 10px 0 0 12px;
-font-weight: 500;
+.badge {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 10px 0 0 12px;
+  font-weight: 500;
+}
+/* Title */
+.cardTitle {
+  margin: 10px 12px 0;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .buttonRow {
-display: flex;
-gap: 8px;
-margin: 12px;
-align-items: center;
+  display: flex;
+  gap: 8px;
+  margin: 12px;
+  align-items: center;
 }
 .metaRow {
-color:white;
-display:flex;
-gap: 10px;
-margin: 8px 12px;
-font-size: 14px;
-font-weight: 500;
- }
+  color: white;
+  display: flex;
+  gap: 10px;
+  margin: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
 
 .circleButton {
-  background-color:black;
-  color:  #ffffff;
+  background-color: black;
+  color: #ffffff;
   border-radius: 50%;
   padding: 1px;
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
-.plusButton{
-    background-color: white;
-    color: black;
-   
+.plusButton {
+  background-color: white;
+  color: black;
 }
-.circleButton:hover{
-    transform: scale(1.05);
-    /* background-color: #e6e6e6; */
+.circleButton:hover {
+  transform: scale(1.05);
+  /* background-color: #e6e6e6; */
 }
 .circleButtonSmall {
-border-radius: 50%; 
-background:white(34,34,34,0.8);
-border: 1px solid #555;
-background-color: white;
-color:black;
-font-size: 16px;
-cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: center;
-margin-left: auto;
-transition:
+  border-radius: 50%;
+  background: white(34, 34, 34, 0.8);
+  border: 1px solid #555;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  transition:
     background 0.2s ease,
     border-color 0.2s ease;
 }
 
-.circleButtonSmall:hover{
-     background: #333;
-     border-color:#777;
+.circleButtonSmall:hover {
+  background: #333;
+  border-color: #777;
 }
-.genres{
-    color: #bbb;
-    font-size: 13px;
-    margin: 6px 12px 12px 12px;
-    line-height: 1.4;
+.genres {
+  color: #bbb;
+  font-size: 13px;
+  margin: 6px 12px 12px 12px;
+  line-height: 1.4;
 }
-.dot{
-    color: #888;
-    margin: 0 4px;
+.dot {
+  color: #888;
+  margin: 0 4px;
 }
-.tag{
-    color: #ddd;
-    margin: 0 4px;
+.tag {
+  color: #ddd;
+  margin: 0 4px;
+}
+/* Overview */
+.overview {
+  margin: 0 12px 12px;
+
+  color: #bcbcbc;
+
+  font-size: 9px;
+  line-height: 1.35;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hoverCard {
+    width: 100px;
+  }
+
+  .hoverImage {
+    height: 100px;
+  }
+
+  .cardTitle {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardWrapper {
+    height: 155px;
+  }
+
+  .poster {
+    height: 100px;
+  }
+
+  .hoverCard {
+    width: 200px;
+    min-height: 240px;
+    top: -25px;
+  }
+
+  .hoverImage {
+    height: 90px;
+  }
+
+  .cardTitle {
+    font-size: 12px;
+  }
+
+  .buttonsRow {
+    gap: 5px;
+    margin: 8px;
+  }
+
+  .iconButton,
+  .iconButtonSmall {
+    width: 28px;
+    height: 28px;
+  }
+
+  .metaRow {
+    margin: 6px 8px;
+    gap: 6px;
+    font-size: 10px;
+  }
+
+  .genres {
+    margin: 5px 8px 8px;
+    font-size: 10px;
+  }
+
+  .overview {
+    margin: 0 8px 8px;
+    font-size: 8px;
+  }
 }

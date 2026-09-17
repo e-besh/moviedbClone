@@ -27,7 +27,8 @@
   margin: 0;
   gap: 40px;
 }
-.logo {
+/* NETFLIX LOGO  */
+/* .logo {
   flex-shrink: 0;
   width: 100px;
   height: 30px;
@@ -37,12 +38,27 @@
 }
 .logo:hover {
   opacity: 0.8;
+} */
+/* fake logo */
+.logo {
+  color: #0000ff;
+  font-size: 28px;
+  letter-spacing: -1px;
+  line-height: 1;
+  cursor: pointer;
+}
+.logo {
+  width: 80px;
+  object-fit: contain;
+  cursor: pointer;
+  font-weight: 900;
 }
 .nav {
   display: flex;
   flex: 1;
   align-items: center;
   gap: 20px;
+  padding-left: 20px;
 }
 .navLink {
   text-decoration: none;

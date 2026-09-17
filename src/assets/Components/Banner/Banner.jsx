@@ -35,6 +35,11 @@ function Banner() {
       <div className={styles.content}>
         <div className={styles.bannerImg}>
           {/* <img className={styles.logoImg} src={logoImage} alt="Netflix Logo" /> */}
+          {/* FAKE LOGO */}
+          <div className={styles.logo}>
+            <span className={styles.logoIcon}>▶</span>
+            <span className={styles.logoText}>Common</span>
+          </div>
         </div>
         <h1 className={styles.title}>{bannerImage?.original_name}</h1>
         <h2 className={styles.description}>

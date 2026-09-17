@@ -9,7 +9,7 @@
 /* Swiper container */
 .Row :global(.swiper) {
   height: 265px;
-  padding: 0 50px; 
+  padding: 0 50px;
 }
 
 /* Slides */

@@ -28,6 +28,10 @@ function Header() {
         <div className={styles.container}>
           {/* logo */}
           {/* <img className={styles.logo} src={logo} /> */}
+          <div className={styles.logo}>
+            <span className={styles.logoIcon}>▶</span>
+            <span className={styles.logoText}>Common</span>
+          </div>
           {/* navigation */}
           <nav className={styles.nav}>
             <Link className={styles.navLink} to="">
@@ -49,7 +53,7 @@ function Header() {
               Browse by Language
             </Link>
           </nav>
-          {/* right side section */}
+          {/* RIGHT SIDE */}
           <div className={styles.rightSection}>
             {/* search */}
             <div className={styles.searchContainer}>
