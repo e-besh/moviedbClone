@@ -15,7 +15,7 @@ function SlideShow({ title, movie }) {
           modules={[Navigation]}
           navigation
           spaceBetween={20}
-          slidesPerView={5.3}
+          slidesPerView={5.4}
         >
           {movie?.map((movie) => (
             <SwiperSlide key={movie.id}>
