@@ -38,7 +38,7 @@ function Banner() {
           {/* FAKE LOGO */}
           <div className={styles.logo}>
             <span className={styles.logoIcon}>▶</span>
-            <span className={styles.logoText}>Common</span>
+            <span className={styles.logoText}>MovieBox</span>
           </div>
         </div>
         <h1 className={styles.title}>{bannerImage?.original_name}</h1>

@@ -1,25 +1,41 @@
 .title {
   color: white;
+  margin-bottom: 10px;
+  font-size: 1.4vw;
+}
+.slideShowContainer {
+  padding-top: 0;
+  position: relative;
+  z-index: 10;
 }
 /* Make wrapper stable */
 .Row {
   position: relative;
+  overflow: visible;
+  /* This creates a stacking context */
+  z-index: 1;
+}
+.Row:hover {
+  z-index: 50;
 }
 
 /* Swiper container */
 .Row :global(.swiper) {
-  height: 265px;
+  height: 220px;
   padding: 0 50px;
+  overflow: visible !important;
 }
 
 /* Slides */
 .Row :global(.swiper-slide) {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   transition: transform 0.3s ease;
   height: 100%; /* remove 130% */
 }
-
+.Row :global(.swiper-wrapper) {
+  overflow: visible;
+}
 /* Navigation buttons base style */
 .Row :global(.swiper-button-prev),
 .Row :global(.swiper-button-next) {
@@ -28,7 +44,7 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  top: 50%;
+  top: 100%;
   transform: translateY(-50%);
 }
 

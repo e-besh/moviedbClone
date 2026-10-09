@@ -30,7 +30,7 @@ function Header() {
           {/* <img className={styles.logo} src={logo} /> */}
           <div className={styles.logo}>
             <span className={styles.logoIcon}>▶</span>
-            <span className={styles.logoText}>Common</span>
+            <span className={styles.logoText}>MovieBox</span>
           </div>
           {/* navigation */}
           <nav className={styles.nav}>

@@ -1,21 +1,24 @@
 .cardContainer {
   position: relative;
-  width: 290px;
-  height: 198px;
+  width: 227px;
+  height: 128px;
   cursor: pointer;
-  transition: transform 0.3 ease;
+  transition: transform 0.3s ease;
   overflow: visible;
   z-index: 1;
 }
 /* Main poster */
 .poster {
-  width: 227px;
-  height: 128px;
+  width: 100%;
+  height: 100%;
   border-radius: 6px;
   object-fit: cover;
   transition: transform 0.3s ease;
   position: relative;
   z-index: 2;
+}
+.cardContainer:hover {
+  z-index: 9999 !important;
 }
 .cardContainer:hover.poster {
   opacity: 0;
@@ -26,11 +29,15 @@
   left: 50%;
   transform: translateX(-50%) scale(0.95);
   width: 320px;
-  min-height: 305px;
+  min-height: auto;
+  max-height: 80vh;
   height: auto;
+  padding-bottom: 12px;
   background: #111;
   border-radius: 8px;
-  overflow: visible;
+  overflow: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
   box-shadow: 0px 20px 40px rgba (0, 0, 0, 0.8);
   /* hidden by default */
   opacity: 0;
@@ -45,7 +52,9 @@
   pointer-events: none;
   z-index: 999999;
 }
-
+.hoverCard::-webkit-scrollbar {
+  display: none;
+}
 .cardContainer:hover .hoverCard {
   opacity: 1;
   visibility: visible;

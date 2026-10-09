@@ -59,19 +59,21 @@ function DisplayRow() {
 
   return (
     <div className={styles.mainWrapper}>
-      <SlideShow
-        className={styles.displayGap}
-        title="Netflix Trending"
-        movie={movies.trending}
-      />
-      <SlideShow title="Popular on Netflix" movie={movies.netflixOriginals} />
+      <div className={styles.slideShowWrapper}>
+        <SlideShow
+          className={styles.displayGap}
+          title="Netflix Trending"
+          movie={movies.trending}
+        />
+        <SlideShow title="Popular on Netflix" movie={movies.netflixOriginals} />
 
-      <SlideShow title="Action" movie={movies.action} />
-      <SlideShow title="Top Rated" movie={movies.topRated} />
-      <SlideShow title="Comedy Movies" movie={movies.comedy} />
-      <SlideShow title="Horror Movies" movie={movies.horror} />
-      <SlideShow title="Romance Movies" movie={movies.romance} />
-      <SlideShow title="Documentaries" movie={movies.documentaries} />
+        <SlideShow title="Action" movie={movies.action} />
+        <SlideShow title="Top Rated" movie={movies.topRated} />
+        <SlideShow title="Comedy Movies" movie={movies.comedy} />
+        <SlideShow title="Horror Movies" movie={movies.horror} />
+        <SlideShow title="Romance Movies" movie={movies.romance} />
+        <SlideShow title="Documentaries" movie={movies.documentaries} />
+      </div>
     </div>
   );
 }
